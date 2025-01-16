@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Settings Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+      /* Advanced Settings Styles */
+#advanced-settings {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.settings-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-item h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#saveSettings {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+#saveSettings:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.form-select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-control {
+    font-size: 1rem;
+}
+
+.form-check-label {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #advanced-settings {
+        padding: 15px;
+    }
+
+    .settings-item {
+        padding: 10px;
+    }
+
+    #saveSettings {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+  <!-- Advanced Settings Page -->
+<section id="advanced-settings" class="container py-5">
+    <h2 class="text-center mb-5">Advanced User Settings</h2>
+
+    <!-- Dark Mode Toggle -->
+    <div class="settings-item mb-4">
+        <h5>Dark Mode</h5>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch" />
+            <label class="form-check-label" for="darkModeSwitch">Enable Dark Mode</label>
+        </div>
+    </div>
+
+    <!-- Language Selection -->
+    <div class="settings-item mb-4">
+        <h5>Language</h5>
+        <select class="form-select" id="languageSelect">
+            <option selected>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+            <option>Chinese</option>
+        </select>
+    </div>
+
+    <!-- Email Notifications -->
+    <div class="settings-item mb-4">
+        <h5>Email Notifications</h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="emailNotifications" checked />
+            <label class="form-check-label" for="emailNotifications">Receive notifications via email</label>
+        </div>
+    </div>
+
+    <!-- Profile Settings -->
+    <div class="settings-item mb-4">
+        <h5>Profile Settings</h5>
+        <label for="userName">Username:</label>
+        <input type="text" class="form-control mb-3" id="userName" placeholder="Enter your username" />
+
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" class="form-control mb-3" id="profilePic" />
+    </div>
+
+    <!-- Privacy Settings -->
+    <div class="settings-item mb-4">
+        <h5>Privacy Settings</h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="publicProfile" checked />
+            <label class="form-check-label" for="publicProfile">Make my profile public</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="twoFactor" />
+            <label class="form-check-label" for="twoFactor">Enable Two-Factor Authentication</label>
+        </div>
+    </div>
+
+    <!-- Communication Preferences -->
+    <div class="settings-item mb-4">
+        <h5>Communication Preferences</h5>
+        <label for="commFrequency">How often would you like to receive updates?</label>
+        <select class="form-select" id="commFrequency">
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+            <option>Never</option>
+        </select>
+    </div>
+
+    <!-- Save Settings Button -->
+    <div class="text-center">
+        <button class="btn btn-success btn-lg" id="saveSettings">Save Settings</button>
+    </div>
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+<footer class="footer bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase font-weight-bold">About Turf Booking</h5>
+                <p>Your one-stop solution to easily book your favorite turf ground for any sport. From basketball to tennis, enjoy hassle-free booking at the best venues. Play your game, your way.</p>
+                <a href="about.html" class="btn btn-outline-light btn-sm mt-2">Learn More</a>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="text-uppercase font-weight-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light">Home</a></li>
+                    <li><a href="courts.html" class="text-light">Our Turfs</a></li>
+                    <li><a href="dashboard.html" class="text-light">Dashboard</a></li>
+                    <li><a href="Settings.html" class="text-light">settings</a></li>
+                    <li><a href="contact.html" class="text-light">Contact</a></li>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase font-weight-bold">Contact Information</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Turf Coimbatore, Tamilnadu</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:support@turfbooking.com" class="text-light">techsqud@turfbooking.com</a></li>
+                    <li><i class="fas fa-phone"></i> +91 9585016133</li>
+                </ul>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-light mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase font-weight-bold">Newsletter</h5>
+                <p>Stay updated with the latest news, events, and exclusive offers.</p>
+                <form id="newsletter-form" class="d-flex">
+                    <input type="email" class="form-control form-control-sm me-2" placeholder="Your Email" required>
+                    <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                </form>
+                <p class="mt-3" id="newsletter-msg"></p>
+            </div>
+        </div>
+
+        <hr class="border-light">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 text-center text-md-start">
+                <p>&copy; 2025 Turf Booking. All Rights Reserved. | <a href="privacy.html" class="text-light">Privacy Policy</a></p>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center text-md-end">
+                <p>Designed by <a href="#" class="text-light">Tech Squad</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add FontAwesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!-- Newsletter Form Script -->
+<script>
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('newsletter-msg').textContent = "Thank you for subscribing!";
+    });
+
+
+    // Dark Mode Toggle Logic
+const darkModeSwitch = document.getElementById('darkModeSwitch');
+
+// Check for stored dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeSwitch.checked = true;
+}
+
+// Dark mode toggle handler
+darkModeSwitch.addEventListener('change', () => {
+    if (darkModeSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
+// Language Selection Logic
+const languageSelect = document.getElementById('languageSelect');
+languageSelect.addEventListener('change', () => {
+    const selectedLanguage = languageSelect.value;
+    alert(`Language changed to: ${selectedLanguage}`);
+    // Implement your language change logic here (e.g., loading content in the selected language)
+});
+
+// Email Notifications Logic
+const emailNotifications = document.getElementById('emailNotifications');
+emailNotifications.addEventListener('change', () => {
+    const isEnabled = emailNotifications.checked;
+    if (isEnabled) {
+        alert('Email notifications enabled!');
+    } else {
+        alert('Email notifications disabled!');
+    }
+});
+
+// Profile Settings Logic
+const userName = document.getElementById('userName');
+const profilePic = document.getElementById('profilePic');
+
+// Here you can handle uploading the profile picture and saving the username
+// For simplicity, we are just logging the values
+userName.addEventListener('blur', () => {
+    console.log(`Username: ${userName.value}`);
+});
+
+profilePic.addEventListener('change', () => {
+    console.log(`Profile Picture: ${profilePic.files[0].name}`);
+});
+
+// Privacy Settings Logic
+const publicProfile = document.getElementById('publicProfile');
+const twoFactor = document.getElementById('twoFactor');
+
+// Handle privacy settings changes
+publicProfile.addEventListener('change', () => {
+    if (publicProfile.checked) {
+        alert('Your profile is now public!');
+    } else {
+        alert('Your profile is private!');
+    }
+});
+
+twoFactor.addEventListener('change', () => {
+    if (twoFactor.checked) {
+        alert('Two-Factor Authentication enabled!');
+    } else {
+        alert('Two-Factor Authentication disabled!');
+    }
+});
+
+// Communication Preferences Logic
+const commFrequency = document.getElementById('commFrequency');
+commFrequency.addEventListener('change', () => {
+    const frequency = commFrequency.value;
+    alert(`You will receive updates ${frequency}`);
+});
+
+// Save Settings Button Logic
+const saveSettingsButton = document.getElementById('saveSettings');
+saveSettingsButton.addEventListener('click', () => {
+    // Save changes (to localStorage or server)
+    alert('Settings saved successfully!');
+});
+
+</script>
+
+</body>
+</html>
